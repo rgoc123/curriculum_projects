@@ -1,0 +1,17 @@
+<form class="" action= '<%= action %>' method="POST">
+  <% if type == 'edit' %>
+  <input type="hidden" name="_method" value="PATCH">
+  <% end %>
+  
+  
+  <label for=""></label>
+  <select class="" name="">
+    <option <%= 'selected' if type != 'edit' %> disabled>-- Please Select Cat --</option>
+    <% cats.each do |cat| %>
+    <option <%= 'selected' if cat.id == cat_rental.cat_id %>  value= "<%= cat.id %>"><%= cat.id %> : <%= cat.name %></option>
+    <% end %>
+  </select>
+  
+  
+  
+</form>

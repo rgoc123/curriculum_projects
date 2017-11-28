@@ -1,0 +1,22 @@
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Color</th>
+    <th>Sex</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td><%= @cat.id %></td>
+    <td><%= @cat.name %></td>
+    <td><%= @cat.age %></td>
+    <td><%= @cat.color %></td>
+    <td><%= @cat.sex %></td>
+    <td><%= @cat.description %></td>
+  </tr>
+</table>
+
+<form action="<%= cat_url(@cat.id) %>" method="delete">
+  <input type="submit" value="Delete Me">
+</form>
