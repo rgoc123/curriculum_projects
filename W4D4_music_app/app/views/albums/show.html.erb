@@ -1,2 +1,26 @@
 <h1><%= @album.title %> by <%=@band.name%> </h1>
-<a href="<%= bands_url %>">Back to bands</a>
+<a href="<%= band_url(@band) %>">Back to album: <%= @album.title %></a>
+
+
+<ul>
+  <% @tracks.each do |track| %>
+    <h2><%= track.title %> </h2>
+    <p>Ord: <%= track.ord %></p>
+    <p>Type: <%= track.regular ? 'regular' : 'bonus' %></p>
+    <div>
+      <!--Detail button-->
+      <a href="<%=track_url(track)%>">Details</a>
+      <!--Edit button-->
+      <a href="<%=edit_track_url(track)%>">Edit Track</a>
+      <!--Delete button-->
+      <form action="<%=track_url(track)%> " method="post">
+        <input type="hidden" name="_method" value="delete">
+        <%= auth_token %>
+        <input type="submit" value="delete">
+      </form>
+      <!--Create track-->
+    </div>
+  <% end %>
+</ul>
+
+<a href="<%=new_album_track_url(@album.id)%>">Add track!</a>

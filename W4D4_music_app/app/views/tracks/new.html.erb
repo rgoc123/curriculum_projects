@@ -1,0 +1,35 @@
+<form action="<%= tracks_url %>" method="post">
+  <%= auth_token %>
+
+  <label>Title
+    <input type="text" name="track[title]" value="">
+  </label>
+
+  <label>Ord
+    <input type="number" min='1' name="track[ord]" value="">
+  </label>
+
+  <label>Albums
+    <select name="track[album_id]">
+      <option disabled selected>--Please Select a Band--</option>
+      <% @albums.each do |album| %>
+      <option <%= 'selected' if album.id == @album.id %> value="<%= album.id %>"><%= album.title %></option>
+      <% end %>
+    </select>
+  </label>
+
+  <div>
+    <label>Regular
+      <input type="radio" name="track[studio]" value="true">
+    </label>
+    <label>Bonus
+      <input type="radio" name="track[studio]" value="false">
+    </label>
+  </div>
+
+  <label>Lyrics
+    <textarea name="track[lyrics]" rows="8" cols="80"></textarea>
+  </label>
+
+  <input type="submit" value="Create Track">
+</form>

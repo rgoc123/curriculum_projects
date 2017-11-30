@@ -1,4 +1,6 @@
 class AlbumsController < ApplicationController
+  before_action :authenticate_user!
+
   def new
     @bands = Band.all
     @band = Band.find_by(id: params[:band_id])
@@ -18,6 +20,7 @@ class AlbumsController < ApplicationController
   def show
     @album = Album.find_by(id: params[:id])
     @band = Band.find_by(id: @album.band_id)
+    @tracks = @album.tracks
   end
 
   def edit

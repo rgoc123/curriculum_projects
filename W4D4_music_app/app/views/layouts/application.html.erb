@@ -13,6 +13,7 @@
       <h1>welcome to soundhouse</h1>
       <div>
         <% if logged_in? %>
+        <h2>Hello <%= current_user.email %></h2>
         <form action="<%= session_url %>" method="post">
           <%= auth_token %>
           <input type="hidden" name="_method" value="delete">
@@ -24,18 +25,18 @@
         <% end %>
       </div>
     </div>
-    
+
     <%= yield %>
-    
+
     <% if flash[:error] %>
     <%= flash[:error] %>
     <% end %>
-    
+
     <% if flash[:success] %>
     <%= flash[:success] %>
     <% end %>
-    
-    
+
+
     <footer>
       Created by Sunny!
     </footer>

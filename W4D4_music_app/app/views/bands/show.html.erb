@@ -18,8 +18,9 @@
         <%= auth_token %>
         <input type="submit" value="delete">
       </form>
-      <!--Create album-->
-      <a href="<%=new_band_album_url(album.band_id)%>">Add album!</a>
     </div>
   <% end %>
 </ul>
+
+<!--Create album-->
+<a href="<%=new_band_album_url(@band.id)%>">Add album!</a>
