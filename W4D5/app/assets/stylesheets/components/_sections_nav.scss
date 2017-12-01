@@ -1,0 +1,11 @@
+.section-nav{
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+  border-bottom: $light-gray solid 1px;
+  font-family: $sans-serif;
+  font-size: 10px;
+  li:hover{
+    background-color: $light-gray;
+  }
+}

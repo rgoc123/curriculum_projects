@@ -1,0 +1,104 @@
+.col-wrapper{
+  display:flex;
+}
+
+.col{
+  margin: 10px;
+  line-height: 1.5;
+}
+
+.col-1 > h1 > a{
+  font-size: 24px;
+  font-style: italic;
+}
+
+.col ul li {
+  list-style: disc;
+  list-style-position: inside;
+  margin: 10px 0;
+}
+
+.author{
+  color: $light-gray;
+  padding: 5px 0;
+  font-size: 10px;
+}
+
+.col-1 > a {
+  color: $light-blue;
+}
+
+.col-1 {
+  border-bottom: 1px $gray solid;
+  padding: 5px 0;
+}
+
+.col-2 > div {
+  border-bottom: 1px solid $gray;
+  padding: 10px 0;
+  &>a{
+    font-weight: bold;
+  }
+  
+
+}
+
+
+.col-3 > h2 {
+  font-size: 12px;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.col-3 > article {
+  display: flex;
+  &>div{
+    margin: 0 5px;
+  }
+}
+
+.title {
+  text-transform: uppercase;
+  font-size: 10px;
+  margin-bottom: 5px;
+}
+
+.col-3 > article > div > a {
+  font-weight: bold;
+  display: block;
+}
+
+.col-3 > article li {
+  font-weight: bold;
+}
+
+footer > div{
+    &>button{background-color: $light-blue;
+  	border-color: black;
+  	color: white;
+  	font-weight: bold;
+  	padding: 6px;
+  	border-radius: 2px;
+  	transition: background-color 1s, border-color 1s;
+  	font-family: $sans-serif;
+  	text-transform: uppercase;
+  	font-size: 10px;
+  	text-align: center;
+    &:hover{
+      background-color: $darkest-blue;
+      border-color: black;
+    }
+  }
+    &>input {
+    border: 1px solid $gray;
+    padding: 2px;
+    min-width: 205px;
+    &::placeholder{
+      color: $light-gray;
+    }
+  }
+}
+
+
+
+

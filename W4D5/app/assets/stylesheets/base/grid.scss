@@ -1,0 +1,34 @@
+.col-1 {
+  width: 20%;
+}
+
+.col-2{
+  width: 45%;
+}
+
+.col-3{
+  width: 30%;
+}
+
+iframe{
+  min-height:400px;
+  width:100%;
+}
+
+/* Attribute selector targeting all elements
+with a class attribute containing 'col-' */
+[class*='col-'] {
+  // ...
+}
+
+[class*='col-']:last-of-type {
+}
+
+@media all and (max-width: 1000px) {
+  [class*='col-'] {
+    width: 100%;
+  }
+  .col-wrapper{
+    flex-direction: column;
+  }
+}
