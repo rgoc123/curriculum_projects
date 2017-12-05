@@ -1,0 +1,13 @@
+<li>
+<form class="" action="<%= comment_url(comment) %>" method="post">
+  <%= auth_token %>
+  <input type="hidden" name="_method" value="delete">
+  <input type="submit" name="" value="Remove Comment">
+</form>
+<%= link_to comment.content, comment_url(comment) %>
+  <ul>
+    <% comment.comments.each do |comment| %>
+      <%= render 'comment', comment: comment %>
+    <% end %>
+  </ul>
+</li>

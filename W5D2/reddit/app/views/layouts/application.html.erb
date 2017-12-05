@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Reddit</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  
+  <body>
+    
+    <% flash[:errors].try(:each) do |err| %>
+      <%= err %>
+    <% end %>
+    
+    <% if !!current_user %>
+      <%= current_user.username %>
+      <form action="<%= session_url %>" method="post">
+        <%= auth_token %>
+        <input type="hidden" name="_method" value="delete">
+        <input type="submit" name="" value="Sign Out">
+      </form>
+      <% else %>
+      <a href="<%= new_session_url %>">Sign In</a>
+      <a href="<%= new_user_url %>">Sign Up</a>
+    <% end %>
+    
+    <%= yield %>
+  </body>
+</html>

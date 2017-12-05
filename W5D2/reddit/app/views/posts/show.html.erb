@@ -1,0 +1,41 @@
+Title:
+<%= @post.title %>
+URL:
+<%= @post.url %>
+Content:
+<%= @post.content %>
+Author:
+<%= @post.author.username %>
+
+<form action="<%= post_url(@post) %>" method="post">
+  <%= auth_token %>
+  <input type="hidden" name="_method" value="delete">
+  <input type="submit" name="" value="Delete Post">
+</form>
+
+<br>
+
+Subs:
+<ul>
+  <% @post.subs.each do |sub| %>
+  <li>
+    <%= sub.title %>
+  </li>
+  <% end %>
+</ul>
+
+<a href="<%= subs_url %>">Subs</a>
+<a href="<%= edit_post_url(@post) %>">Edit Post</a>
+
+<h3>Comments:</h3>
+<form class="" action="<%= post_comments_url(@post) %>" method="post">
+  <%= auth_token %>
+  <textarea name="comment[content]" rows="2" cols="80" placeholder="This is my fight song. My take back my life song. Prove I'm all right song."></textarea>
+  <input type="submit" name="" value="Add Comment">
+</form>
+
+<ul>
+  <% @post.comments.each do |comment| %>
+    <%= render 'comment', comment: comment %>
+  <% end %>
+</ul>

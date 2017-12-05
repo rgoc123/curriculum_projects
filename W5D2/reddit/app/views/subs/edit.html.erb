@@ -1,0 +1,15 @@
+Edit Sub
+<form action="<%= sub_url(@current_sub) %>" method="post">
+  <%= auth_token %>
+  <input type="hidden" name="_method" value="patch">
+  
+  <label>Title
+    <input type="text" name="sub[title]" value="<%= @current_sub.title %>">
+  </label>
+  
+  <label>Description
+    <textarea name="sub[description]" rows="8" cols="80"><%= @current_sub.description %></textarea>
+  </label>
+  
+  <input type="submit" name="" value="Update Sub">
+</form>

@@ -1,0 +1,10 @@
+Post: <%= @comment.post.title %>
+
+<%= @comment.content %>
+
+<form class="" action="<%= post_comments_url(@comment.post) %>" method="post">
+  <%= auth_token %>
+  <textarea name="comment[content]" rows="1" cols="80" placeholder="This is my fight song. My take back my life song. Prove I'm all right song."></textarea>
+  <input type="hidden" name="comment[parent_id]" value="<%= @comment.id %>">
+  <input type="submit" name="" value="Add Comment">
+</form>
