@@ -1,0 +1,50 @@
+/* PHASE 3: Layout */
+
+.content, footer {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  background: #fff;
+  width: 900px;
+  border: 1px solid #ccc;
+  border-top: 0;
+}
+
+.content-sidebar {
+  width: 200px;
+  min-height: 200px;
+  padding: 20px;
+  padding-right: 19px;
+  border-right: 1px solid #ccc;
+}
+
+.content-main {
+  width: 620px;
+  min-height: 200px;
+  padding: 20px;
+}
+
+footer {
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+  color: grey;
+}
+
+footer > ul {
+  display: flex;
+  
+}
+
+footer > section p {
+  padding: 15px;
+}
+
+footer > ul li {
+  margin: 0px 15px;
+  
+}
+
+footer li:hover{
+  color: black;
+}
