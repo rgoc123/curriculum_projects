@@ -1,0 +1,15 @@
+/* PHASE 8: Thumbs */
+.thumb{
+  display:block;
+}
+
+.thumb:after{
+  content: attr(title);
+  display:none;
+}
+
+.thumb:hover:after{
+  display:block;
+}
+
+
