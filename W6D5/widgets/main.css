@@ -1,0 +1,77 @@
+#clock{
+  width: 700px;
+  margin: 0 auto;
+}
+
+.clock{
+  background-color: orange;
+  border: 1px solid black;
+  color: white;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+}
+
+
+#tabBodies li {
+  display: none;
+}
+
+#tabHeaders li {
+  display: inline-block;
+  box-sizing: border-box;
+  border: 1px solid black;
+  border-top-right-radius:10px;
+  border-top-left-radius: 10px;
+  cursor: pointer;
+  width: 33.33%;
+  text-align: center;
+  background-color: cornflowerblue;
+}
+
+#tabBodies {
+  box-sizing: border-box;
+  border: 1px solid black;
+  border-top: none;
+  height: 250px;
+
+
+  text-align: center;
+  background-color: cornflowerblue;
+  font-size: 25px;
+}
+
+#tabHolder {
+  width: 300px;
+  height: 750px;
+}
+
+
+.tabHeaderActive {
+  font-weight: bold;
+  border-bottom: 1px solid cornflowerblue !important;
+}
+
+.tabBodiesActive {
+  height: 100%;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+#weather {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  background-color: pink;
+  border: 1px solid black;
+}
+
+#root >  div{
+  display: flex;
+  flex-direction: row;
+}
