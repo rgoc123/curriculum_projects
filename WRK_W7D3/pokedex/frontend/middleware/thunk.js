@@ -7,4 +7,3 @@ const thunk = store => next => action => {
 };
 
 export default thunk;
-window.thunk = thunk;

@@ -94,6 +94,21 @@
    padding-top: 20px;
  }
 
+#root > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+#root > div> ul {
+  height: 600px;
+  width: 250px;
+  overflow-y: scroll;
+  border: 1px solid grey;
+  background: rgba(0,0,0,0.2);
+}
+
+
+
  h2 {
    font-size: 32px;
  }
@@ -102,4 +117,21 @@
    font-size: 24px;
    text-align: center;
    color: $black;
+ }
+
+ img {
+   height: 70px;
+   width: 70px;
+
+ }
+
+ .detail {
+   height: 300px;
+   width: 300px;
+ }
+
+ .div-detail {
+   text-align: center;
+   font-size: 50px;
+   margin: 0 auto;
  }

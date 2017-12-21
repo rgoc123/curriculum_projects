@@ -3,3 +3,8 @@ html, body {
 	padding: 0;
 	border: 0;
 }
+
+li {
+
+  list-style: none;
+}
